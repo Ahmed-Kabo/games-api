@@ -14,7 +14,7 @@ const GameSection = styled.div`
   border-radius: 1rem;
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  min-height: 40vh;
+  min-height: 45vh;
   text-align: center;
   background: #121212;
   img {

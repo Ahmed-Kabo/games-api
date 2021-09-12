@@ -28,7 +28,7 @@ const Home = () => {
         ))}
       </Games>
 
-      <h1>popular games </h1>
+      <h1>new games  </h1>
       <Games>
         {newgames.map((game) => (
           <Game
@@ -41,7 +41,7 @@ const Home = () => {
         ))}
       </Games>
 
-      <h1>popular games </h1>
+      <h1>upcoming games </h1>
       <Games>
         {upcoming.map((game) => (
           <Game
@@ -58,12 +58,13 @@ const Home = () => {
 };
 
 const GamesContainer = styled.section`
-  padding: 3rem 5rem;
+  padding: 3rem 5%;
   width: 90%;
+  margin: auto;
 `;
 const Games = styled(motion.div)`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 3rem;
   width: 100%;
 `;
