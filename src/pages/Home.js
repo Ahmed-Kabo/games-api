@@ -4,7 +4,14 @@ import { useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import Game from "../components/Game";
+import { useLocation } from "react-router";
+import GameDetails from "../components/GameDetail";
+
 const Home = () => {
+  //start get a id path from
+  // const location = useLocation();
+  // const pathId = location.pathname.split("/")[2];
+
   // to git the data from the reducer
   const dispatch = useDispatch();
   useEffect(() => {
@@ -15,6 +22,7 @@ const Home = () => {
   const { popular, newgames, upcoming } = useSelector((state) => state.games);
   return (
     <GamesContainer>
+      {/* {pathId && <GameDetails />} */}
       <h1>popular games </h1>
       <Games>
         {popular.map((game) => (
@@ -28,7 +36,7 @@ const Home = () => {
         ))}
       </Games>
 
-      <h1>new games  </h1>
+      <h1>new games </h1>
       <Games>
         {newgames.map((game) => (
           <Game
@@ -64,7 +72,7 @@ const GamesContainer = styled.section`
 `;
 const Games = styled(motion.div)`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   gap: 3rem;
   width: 100%;
 `;

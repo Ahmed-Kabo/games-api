@@ -1,11 +1,14 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Game = ({ id, name, released, img }) => {
   return (
     <GameSection>
-      <img src={img} alt={name} />
-      <h2>{name}</h2>
-      <p>{released}</p>
+      <Link to={`/game/${id}`}>
+        <img src={img} alt={name} />
+        <h2>{name}</h2>
+        <p>{released}</p>
+      </Link>
     </GameSection>
   );
 };
