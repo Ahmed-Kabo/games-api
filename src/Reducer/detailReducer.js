@@ -1,5 +1,5 @@
 const detailState = {
-  detail: {},
+  detail: { platforms: {} },
   screen: {},
   isLoading: true,
 };

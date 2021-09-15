@@ -5,14 +5,14 @@ const loadDetails = (id) => async (dispatch) => {
   dispatch({
     type: "LOADING_GAME",
   });
-  const DetailData = await axios.git(gameDetailURL(id));
-  const screenData = await axios.git(gameScreeShotURL(id));
+  const DetailData = await axios.get(gameDetailURL(id));
+  const screenData = await axios.get(gameScreeShotURL(id));
 
   dispatch({
     type: "GAME_DETAIL",
     payload: {
-      detail: DetailData.data.results,
-      screen: screenData.data.results,
+      detail: DetailData.data,
+      screen: screenData.data,
     },
   });
 };
